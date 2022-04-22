@@ -225,6 +225,10 @@
     display: flex;
     justify-content: center;
 }
+.input-day {
+    width: 37%;
+    margin: 1rem 0 1rem 0 !important;
+}
 .order {
     border: 1px solid rgba(0, 0, 0, 0.23) !important;
     padding-bottom: 1rem;
@@ -240,6 +244,14 @@
     width: 87%;
     border: 1px solid rgba(0, 0, 0, 0.23) !important;
     color: #000 !important;
+    margin: 0.5rem 1.5rem 0.3rem 1.8rem !important;
+}
+.number-person {
+    width: 87% !important;
+}
+.input-person {
+    width: 100% !important;
+    margin: 0.5rem 1.5rem 0.3rem 1.8rem !important;
 }
 .number-person input{
     height: 0.8rem !important;
@@ -298,6 +310,13 @@
     .content-recommend{
         bottom: 5.5rem;
     }
+    .person {
+        margin: 0.5rem 1.5rem 0.3rem 1.5rem !important;
+    }
+    .input-person {
+        margin: 0.5rem 1.5rem 0.3rem 1.5rem !important;
+    
+    }
 }
 @media screen and (max-width: 780px) {
     .recomment-div {
@@ -335,6 +354,16 @@
     .text-order {
         display: block;
     }
+    .person {
+        margin: 0.5rem 1.5rem 0.3rem 1.9rem !important;
+    }
+    .input-person {
+        margin: 0.5rem 1.5rem 0.3rem 1.9rem !important;
+    }
+    .input-day {
+        width: 38%;
+        margin-left: 0.4rem !important;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -344,5 +373,11 @@
     .content-recommend{
         bottom: 5rem;
         font-size: 0.9rem;
+    }
+    .person {
+        margin: 0.5rem 1rem 0.3rem 1rem !important;
+    }
+    .input-person {
+        margin: 0.5rem 1.5rem 0.3rem 1rem !important;
     }
 }

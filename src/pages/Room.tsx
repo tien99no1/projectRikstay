@@ -281,20 +281,12 @@ function Room() {
                       renderInput={(startProps, endProps) => (
                         <Box className="input-date">
                           <TextField
-                            sx={{
-                              width: "37%",
-                              mb: "1rem",
-                              mt: "1rem",
-                            }}
+                          className="input-day"
                             {...startProps}
                           />
                           <Box sx={{ margin: "2rem 1rem 0 1rem" }}> đến </Box>
                           <TextField
-                            sx={{
-                              width: "37%",
-                              mb: "1rem",
-                              mt: "1rem",
-                            }}
+                          className="input-day"
                             {...endProps}
                           />
                         </Box>
@@ -306,36 +298,29 @@ function Room() {
                   <Button
                     className="person"
                     disabled={true}
-                    sx={{ m: "0.5rem 1.5rem 1rem 1.9rem" }}
                   >
                     Số lượng khách: {totalCustomers}
                   </Button>
                   <Box
                     className="number-person"
                     component="form"
-                    sx={{
-                      "& .MuiTextField-root": {
-                        m: "0.5rem 1.5rem 0.3rem 1.9rem",
-                        width: "87%",
-                      },
-                    }}
                     noValidate
                     autoComplete="off"
                   >
                     <TextField
                       id="outlined-disabled"
+                      className="input-person"
                       label="Người lớn"
                       type="number"
                       onChange={(e) => setAdults(e.target.value)}
                       InputLabelProps={{
                         shrink: true,
                       }}
-                      InputProps={{
-                        inputProps: { min: 0, max: 100 },
-                      }}
+                      
                     />
                     <TextField
                       id="outlined-number"
+                      className="input-person input-child"
                       label="Trẻ em"
                       type="number"
                       onChange={(e) => setChildren(e.target.value)}
