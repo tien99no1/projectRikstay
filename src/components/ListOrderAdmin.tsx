@@ -38,7 +38,7 @@ function News() {
   return (
     <>
       <Box
-        maxWidth="lg"
+        maxWidth="xl"
         sx={{
           border: "1px solid #dae3dc",
           padding: "10px",
