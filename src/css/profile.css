@@ -1,0 +1,68 @@
+.banner-profile {
+  background: url("https://jooinn.com/images/nature-background-30.jpg") 50% fixed;
+  background-size: cover;
+  height: 350px;
+  border-radius: 7px;
+}
+.body-profile {
+  height: 400px;
+  background-color: #fff;
+}
+.avatar {
+  text-align: center;
+  margin: 0 auto;
+}
+.avatar-img {
+  width: 170px !important;
+  height: 170px !important;
+  font-size: 6rem !important;
+  margin: 0 auto;
+}
+.profile {
+  position: relative;
+  bottom: 5rem;
+}
+.name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0.5rem;
+}
+.table {
+  width: 50% !important;
+  margin: 0 auto;
+}
+.t-head {
+  font-weight: 600;
+}
+.TableRow {
+    padding: 0 !important;
+}
+.value-user {
+  text-align: end !important;
+}
+.edit-user {
+  margin: 1.2rem 0 1.2rem 0 !important;
+}
+.name-edit {
+  margin: 1rem 0 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.text-name {
+  width: 49%;
+}
+.text-user-edit {
+  width: 100% !important;
+}
+.edit-name {
+  width: 100%;
+}
+.btn-edit-user {
+  color: #fff !important;
+  background: #01579b !important;
+  width: 100px;
+}
+.title-dialog {
+  text-align: center !important;
+  text-transform: uppercase;
+}

@@ -1,0 +1,348 @@
+
+.box h2{
+    font-size: 2rem;
+    margin-block-end: 0.5rem;
+}
+.box h3{
+    font-size: 1.6rem;
+    margin-block-end: 0.5rem;
+}
+.banner button {
+    display: none;
+}
+.cover-highlights {
+    position: relative;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+}
+.cover-highlights img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.cover-highlights:before {
+    content: "";
+    display: block;
+    padding-top: 125%;
+}
+.content{
+    position: absolute;
+    bottom: 1.5rem;
+    padding-left: 1rem;
+    color: #fff;
+    cursor: pointer;
+}
+.content .title{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.img-voucher{
+    width: 100%;
+    height: 170px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 7px;
+}
+.img-voucher img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+    padding-right: 5px;
+}
+.img-recommend {
+    position: relative;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+}
+.img-recommend img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97%;
+    height: 60%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.img-recommend::before {
+    content: "";
+    display: block;
+    padding-top: 120%;
+}
+.recommend {
+    cursor: pointer;
+}
+.content-recommend{
+    padding-right: 1rem;
+    position: relative;
+    bottom: 8rem;
+}
+.content-recommend .title-recommend {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.recommend:hover > .content-recommend{
+    color: #b71c1c;
+    transition: 0.6s ease;
+}
+.recomment-div {
+    height: 350px;
+}
+.recomment-div button {
+    top: 27%;
+}
+.About{
+    margin-top: 2rem;
+}
+.About > h2, .About >h5{
+    text-transform: uppercase;
+}
+.About p{
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+.About p:hover{
+    text-decoration: underline;
+    color: #b71c1c;
+}
+.phone {
+    display: flex !important;
+}
+.phone a{
+    text-decoration: none;
+    color: #000;
+}
+.location-top {
+    margin-top: 1rem;
+}
+.btn-filter button{
+    font-size: 0.9rem;
+    background: inherit;
+    height: 35px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.btn-filter button:hover {
+    background: #b71c1c;
+    color: #fff;
+}
+.caption-local {
+    margin: 3rem 0 3rem 0;
+}
+.place {
+    display: flex;
+    justify-content: space-between;
+}
+.img-location{
+    width: 100%;
+    height: 190px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    
+}
+.img-location img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.content-location span{
+    position: relative;
+    top: 5px;
+    font-size: 0.9rem;
+    color: rgb(118, 118, 118);
+}
+.content-location p {
+    position: relative;
+    cursor: pointer;
+}
+.content-location b{
+    position: relative;
+    top: -20px;
+}
+.img-room{
+    width: 100%;
+    height: 450px;
+    background-color: #000;
+    cursor: pointer;
+    overflow:hidden;
+}
+.div-banner-room button {
+    margin: 0 2rem 0 2rem !important;
+}
+.container-room {
+    display: flex;
+    position: relative;
+}
+.room-left {
+    width: 60%;
+}
+.room-right {
+    width: 40%;
+    margin-top: 4rem;
+    margin-left: 5px;
+}
+.text-order {
+    display: none;
+}
+.img-room img{
+    width: 99%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(80%);
+    -webkit-transition: all 0.7s ease; transition: all 0.7s ease;
+}
+.img-room img:hover {
+    -webkit-transform:scale(1.3); transform:scale(1.3);
+    filter: brightness(100%);
+
+}
+.mr {
+    margin-right: 2rem;
+    cursor: pointer;
+}
+.mr:hover {
+    color: #b71c1c;
+}
+.margin-icon >b{
+    margin-left: 10px;
+}
+.phone >span{
+    margin-left: 1rem;
+}
+.input-date{
+    display: flex;
+    justify-content: center;
+}
+.order {
+    border: 1px solid rgba(0, 0, 0, 0.23) !important;
+    padding-bottom: 1rem;
+    border-radius: 5px;
+}
+.box-person {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+.person {
+    width: 87%;
+    border: 1px solid rgba(0, 0, 0, 0.23) !important;
+    color: #000 !important;
+}
+.number-person input{
+    height: 0.8rem !important;
+}
+.order-now{
+    width: 87%;
+    border: 1px solid rgba(0, 0, 0, 0.23) !important;
+    color: #fff !important;
+    background: #b71c1c !important;
+}
+.advise {
+    border: 1px solid rgba(0, 0, 0, 0.23) !important;
+    padding-bottom: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+.input-advise {
+    width: 92%;
+}
+.btn-advise {
+    width: 92%;
+    border: 1px solid rgba(0, 0, 0, 0.23) !important;
+    color: #fff !important;
+    background: #000 !important;
+    margin-top: 1rem !important;
+}
+.form-advise {
+    padding: 10px 0px 0px 20px;
+}
+.price-room {
+    margin-left: 1rem;
+}
+.price {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.form-advise :first-child{
+    margin-bottom: 10px;
+}
+.text-advise input {
+    height: 0.6rem !important;
+}
+.text-advise label {
+    font-size: 0.9rem;
+}
+.slick-prev, .slick-next{
+    display: none !important;
+}
+.maps {
+    height: 450px;
+}
+.map-marker {
+    margin-top: -30px;
+}
+@media screen and (max-width: 1025px) {
+    .content-recommend{
+        bottom: 5.5rem;
+    }
+}
+@media screen and (max-width: 780px) {
+    .recomment-div {
+        height: 300px;
+    }
+    .content-recommend{
+        bottom: 4.5rem;
+        font-size: 0.9rem;
+    }
+    .box h2 {
+        font-size: 1.5rem;
+    }
+    .box span, p {
+        font-size: 0.9rem;
+    }
+    .box h3 {
+        font-size: 1.3rem;
+    }
+    .About > h2, .About >h5{
+        font-size: 1.1rem;
+    }
+    .About p{
+        font-size: 0.9rem;
+    }
+    .container-room {
+        display: block;
+    }
+    .room-left {
+        width: 100%;
+    }
+    .room-right {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .text-order {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .recomment-div {
+        height: 270px;
+    }
+    .content-recommend{
+        bottom: 5rem;
+        font-size: 0.9rem;
+    }
+}
