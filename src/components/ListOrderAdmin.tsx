@@ -7,12 +7,9 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-// import { Button } from "@mui/material";
 import { CONFIG } from "../config";
 import { bookRoom } from "../type";
 import { Pagination, Stack } from "@mui/material";
-// utils
-// services function
 
 function News() {
   const [booking, setBooking] = useState<any[]>([]);
@@ -50,7 +47,7 @@ function News() {
         {booking.length > 0 ? (
           <div>
             <div>
-              {booking.map((book: bookRoom, index: number) => {
+              {currentBooking.map((book: bookRoom, index: number) => {
                 return (
                   <div key={book.id} className="div-card">
                     <Card sx={{ width: "100%", display: "flex" }}>
@@ -106,7 +103,9 @@ function News() {
             </Stack>
           </div>
         ) : (
-          <h4 className="center">Chưa có đơn đặt phòng</h4>
+          <Box textAlign={"center"}>
+            <h5>Chưa có đơn đặt chỗ nào</h5>
+          </Box>
         )}
       </Box>
     </>

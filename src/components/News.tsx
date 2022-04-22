@@ -2,7 +2,7 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { Button, Pagination, Stack } from "@mui/material";
@@ -144,7 +144,9 @@ function News() {
             </Stack>
           </div>
         ) : (
-          <h4 className="center">Bạn chưa có đơn đặt chỗ nào</h4>
+          <Box textAlign={'center'}>
+            <h5>Bạn chưa có đơn đặt chỗ nào</h5>
+          </Box>
         )}
       </Box>
       <Footer />

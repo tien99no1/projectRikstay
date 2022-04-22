@@ -46,7 +46,7 @@ function ListRoomAdmin() {
   const [postPerPage, setPostPerPage] = useState(3);
   const indexOfLastRoom = currentPage * postPerPage;
   const indexOfFirstRoom = indexOfLastRoom - postPerPage;
-  const listRoomReverse = listAllRoom.slice().reverse()
+  const listRoomReverse = listAllRoom.slice().reverse();
   const listAllRoomCurrent = listRoomReverse.slice(
     indexOfFirstRoom,
     indexOfLastRoom
@@ -158,7 +158,10 @@ function ListRoomAdmin() {
                         <TableCell className="tableCell" align="center">
                           <p>{item.id}</p>
                         </TableCell>
-                        <TableCell className="img-table tableCell" align="center">
+                        <TableCell
+                          className="img-table tableCell"
+                          align="center"
+                        >
                           <div>
                             <img
                               className="img-list-room"
@@ -269,7 +272,9 @@ function ListRoomAdmin() {
           </TableContainer>
         </div>
       ) : (
-        <h4 className="center">Chỗ nghỉ của bạn đang trống</h4>
+        <Box textAlign={"center"}>
+          <h5>Chưa có chỗ nghỉ</h5>
+        </Box>
       )}
     </div>
   );

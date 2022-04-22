@@ -10,7 +10,7 @@ import { styled } from "@mui/material/styles";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { CONFIG } from "../config";
-import { Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import ModeEditOutlineOutlinedIcon from "@mui/icons-material/ModeEditOutlineOutlined";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -144,7 +144,9 @@ function ListUser() {
           </TableContainer>
         </div>
       ) : (
-        <h4>Chưa có người dùng</h4>
+        <Box textAlign={'center'}>
+            <h5>Chưa có người dùng</h5>
+        </Box>
       )}
     </div>
   );

@@ -9,7 +9,7 @@ import { signUpSuccess } from "../store/userSlice";
 import { useDispatch } from "react-redux";
 import { CONFIG } from "../config";
 import Noti from "../components/Noti";
-import '../css/login.css'
+import "../css/login.css";
 
 interface IFormInputs {
   email: string;
@@ -71,9 +71,9 @@ function Login() {
   const onSubmit = async (data: IFormInputs) => {
     const user = await handleUser(data.email, data.password);
     if (user) {
-      navigate("/");
       localStorage.setItem("userId", JSON.stringify(userId.current));
-      sessionStorage.removeItem('advide');
+      navigate("/");
+      sessionStorage.removeItem("advide");
       dispatch(signUpSuccess(userName.current));
     } else {
       setPayloadNoti({
@@ -146,7 +146,7 @@ function Login() {
         </Box>
         <Box className="form-login">
           <p>
-            Bạn chưa có tài khoản RikStay?{" "}
+            Bạn chưa có tài khoản RikStay?
             <Link
               style={{
                 textDecoration: "none",

@@ -10,7 +10,6 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { CONFIG } from "../config";
 import { Box, Button, TextField } from "@mui/material";
-import React from "react";
 import NumberFormat from "react-number-format";
 import { bookRoom } from "../type";
 
@@ -193,7 +192,9 @@ function ListRoomUserOrder() {
           </TableContainer>
         </div>
       ) : (
-        <h4 className="center">Bạn chưa đặt chỗ</h4>
+        <Box textAlign={"center"}>
+          <h5>Bạn chưa đặt chỗ</h5>
+        </Box>
       )}
     </div>
   );

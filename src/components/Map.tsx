@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 import "../css/home.css";
 import { CONFIG } from "../config";

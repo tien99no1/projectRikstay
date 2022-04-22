@@ -6,6 +6,8 @@ import { Box, Button, styled, TextField } from "@mui/material";
 import LoginSocial from "../components/LoginSocialMedia";
 import { CONFIG } from "../config";
 import '../css/login.css'
+import axios from "axios";
+import Noti from "../components/Noti";
 
 interface IFormInputs {
   email: string;
@@ -13,6 +15,11 @@ interface IFormInputs {
 }
 
 function Login() {
+  const [showNoti, setShowNoti] = useState(false);
+  const [payloadNoti, setPayloadNoti] = useState({
+    status: "success",
+    text: "",
+  });
   const CustomTextField = styled(TextField)({
     "& label.Mui-focused": {
       color: "#959392",
@@ -36,19 +43,12 @@ function Login() {
   const hostId = useRef('');
 
   const handleUser = async (email: string, password: string) => {
-    const settings = {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    };
     try {
-      const response = await fetch(
+      const response = await axios.get(
         `${CONFIG.ApiUser}?email=${email}&password=${password}`,
-        settings
       );
 
-      const dataHost = await response.json();
+      const dataHost = await response.data;
       if (dataHost.length > 0) {
         hostName.current = dataHost[0].lastName;
         hostId.current = dataHost[0].id;
@@ -76,7 +76,11 @@ function Login() {
       localStorage.setItem("hostName", JSON.stringify(hostName.current));
       localStorage.setItem("hostId", JSON.stringify(hostId.current));
     } else {
-      alert("Sai tài khoản hoặc mật khẩu");
+      setPayloadNoti({
+        status: "error",
+        text: "Sai tài khoản hoặc mật khẩu",
+      });
+      setShowNoti(true);
     }
   };
 
@@ -206,6 +210,11 @@ function Login() {
           </Box>
         </Box>
       </Box>
+      <Noti
+        payload={payloadNoti}
+        showNoti={showNoti}
+        setShowNoti={setShowNoti}
+      />
     </Box>
   );
 }

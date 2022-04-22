@@ -228,7 +228,9 @@ function ListRoom() {
           </TableContainer>
         </div>
       ) : (
-        <h4 className="center">Chỗ nghỉ của bạn đang trống</h4>
+        <Box textAlign={"center"}>
+          <h5>Chỗ nghỉ của bạn đang trống</h5>
+        </Box>
       )}
       <Footer />
     </div>

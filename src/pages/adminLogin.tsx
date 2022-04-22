@@ -1,9 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
-import { Box, Button, Container, styled, TextField } from "@mui/material";
+import { Box, Button, styled, TextField } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { CONFIG } from "../config";
+import Noti from "../components/Noti";
+import axios from "axios";
 
 interface IFormInputs {
   email: string;
@@ -11,6 +13,11 @@ interface IFormInputs {
 }
 
 function LoginAdmin() {
+  const [showNoti, setShowNoti] = useState(false);
+  const [payloadNoti, setPayloadNoti] = useState({
+    status: "success",
+    text: "",
+  });
   const CustomTextField = styled(TextField)({
     "& label.Mui-focused": {
       color: "#959392",
@@ -30,22 +37,15 @@ function LoginAdmin() {
       },
     },
   });
-  const adminId = useRef('');
+  const adminId = useRef("");
 
   const handleAdmin = async (email: string, password: string) => {
-    const settings = {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    };
     try {
-      const response = await fetch(
-        `${CONFIG.ApiAdmin}?email=${email}&password=${password}`,
-        settings
+      const response = await axios.get(
+        `${CONFIG.ApiAdmin}?email=${email}&password=${password}`
       );
 
-      const dataAdmin = await response.json();
+      const dataAdmin = await response.data;
       if (dataAdmin.length > 0) {
         adminId.current = dataAdmin[0].id;
         console.log("true");
@@ -68,12 +68,16 @@ function LoginAdmin() {
   const navigate = useNavigate();
 
   const onSubmit = async (data: IFormInputs) => {
-    const admin  = await handleAdmin(data.email, data.password);
+    const admin = await handleAdmin(data.email, data.password);
     if (admin) {
-      navigate("/adminPage");
       localStorage.setItem("adminId", JSON.stringify(adminId.current));
+      navigate("/adminPage");
     } else {
-      alert("Sai tài khoản hoặc mật khẩu");
+      setPayloadNoti({
+        status: "error",
+        text: "Sai tài khoản hoặc mật khẩu",
+      });
+      setShowNoti(true);
     }
   };
 
@@ -138,6 +142,11 @@ function LoginAdmin() {
           </form>
         </Box>
       </Box>
+      <Noti
+        payload={payloadNoti}
+        showNoti={showNoti}
+        setShowNoti={setShowNoti}
+      />
     </Box>
   );
 }
